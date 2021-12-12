@@ -1,0 +1,145 @@
+/**************************************************************/
+/************************* Common Use *************************/
+/**************************************************************/
+
+.intro-container {
+    font-size:        2rem;
+    margin:           6rem auto;
+    margin-top:       8rem;
+    padding:          4rem;
+    text-align:       justify;
+}
+
+
+/**************************************************************/
+/************************* Common Use *************************/
+/**************************************************************/
+
+.hero-title {
+    margin-top: 6rem;
+}
+
+
+/************************************************************/
+/************************* Main Nav *************************/
+/************************************************************/
+
+.main-nav-container {
+    align-content:         center;
+    background-color:      var(--green-1);
+    display:               grid;
+    gap:                   4rem;
+    grid-template-columns: repeat(2, 1fr);
+    height:                8rem;
+    justify-content:       center;
+    left:                  0;
+    position:              fixed;
+    top:                   0;
+    width:                 100%;
+    z-index: 100;
+}
+
+.main-nav-list {
+    align-items:      center;
+    display:          flex;
+    flex-direction:   row;
+    justify-content:  space-around;
+    margin:           1.4rem 0 0 0;
+    padding:          0;
+}
+
+.main-nav-list li {
+    font-size:  2rem;
+    list-style: none;
+}
+
+.main-nav-list a {
+    border-radius: 1.4rem;
+    color:         var(--white-3);
+    display:       block;
+    margin:        0;
+    padding:       0rem 2rem;
+    transition:    all 0.3s linear;
+}
+
+.main-nav-list a:hover {
+    background-color: var(--yellow-1);
+    color:            var(--green-3);
+}
+
+.main-nav-list a:active {
+    background-color: var(--green-2);
+    color:            var(--white-3);
+}
+
+.main-logo {
+    color:          var(--white-3);
+    display:        block;
+    font-size:      1.8rem;
+    font-weight:    400;
+    letter-spacing: 0rem;
+    margin:         0 0 0 1.6rem;
+    padding:        0;
+    text-shadow:    0.6rem 0.6rem 0.3rem var(--green-3);
+}
+
+@media screen and (min-width: 900px) {
+
+    .main-nav-list li {
+        font-size:  2.4rem;
+        list-style: none;
+    }
+    
+    .main-logo {
+        font-size:      2rem;
+        letter-spacing: 0rem;
+    }    
+    
+}
+
+
+/********************************************************/
+/************************* Hero *************************/
+/********************************************************/
+
+.hero-index {
+    background: url("../img/fondo1.jpg") no-repeat center center/cover;
+}
+
+.hero-projects {
+    background: url("../img/proyectos.jpg") no-repeat center center/cover;
+}
+
+.hero-blog {
+    background: url("../img/blog.jpg") no-repeat center center/cover;
+}
+
+.hero-contact {
+    background: url("../img/contacto.jpg") no-repeat center center/cover;
+}
+
+
+/***********************************************************/
+/************************* Youtube *************************/
+/***********************************************************/
+
+.logo-youtube i {
+    font-size: 30rem;
+    margin:    6rem auto;    
+}
+
+.video iframe {
+    height: 38rem;
+    margin: 4rem auto;
+    width:  44rem;
+}
+
+
+/***************************************************************/
+/************************* Main Footer *************************/
+/***************************************************************/
+
+.social-links {
+    gap: 6rem;
+}
+

@@ -1,0 +1,382 @@
+/*************************************************************************/
+/******************************  Variables  ******************************/
+/*************************************************************************/
+
+:root {
+    --white-1:  #ffffff;
+    --white-2:  #fffffe;
+    --white-3:  #feffb5;
+    --red-1:    #c4302b;
+    --red-2:    #9a3232;
+    --red-3:    #441818;
+    --yellow-1: #b4b229;
+    --yellow-2: #E1AA0C;
+    --yellow-3: #c39200;
+    --yellow-4: #85780a;
+    --green-1:  #148f58;
+    --green-2:  #116161;
+    --green-3:  #194b19;
+    --green-4:  #092e1d;
+    --blue-1:   #3c3694;
+    --blue-2:   #18117c;
+    --blue-3:   #3d2b7e;
+    --pink-1:   #f1c1d1;
+    --black-1:  #0a0202;
+    /* 'MuseoModerno', cursive; */
+    /* 'Ubuntu', sans-serif; */
+}
+
+
+/************************************************************/
+/************************* Settings *************************/
+/************************************************************/
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin:     0;
+    padding:    0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size:  62.5%;
+}
+
+body {    
+    background-color: var(--red-2);
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230d2a58' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-family:      'MuseoModerno', cursive;
+    font-size:        1.6rem;
+    line-height:      2;    
+    margin-top:       8rem;
+}
+
+
+/***********************************************************/
+/************************* Globals *************************/
+/***********************************************************/
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+
+h3 {
+    font-size: 2.6rem;
+}
+
+
+/**************************************************************/
+/************************* Common Use *************************/
+/**************************************************************/
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.round-box {
+    border-radius: 2rem;
+    box-shadow:    1.2rem 1.2rem 2.4rem var(--black-1);
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-85 {
+    width: 85%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+
+/********************************************************/
+/************************* Hero *************************/
+/********************************************************/
+
+.hero {
+    align-items:     center;
+    display:         flex;
+    height:          74rem;
+    justify-content: center;
+}
+
+.hero-title {
+    color:         var(--green-2);
+    font-size:     8rem;
+    font-weight:   400;
+    margin-top:    0;
+    text-shadow:   0.5rem 0.5rem 0.2rem var(--green-3);
+    transition:    all 0.6s linear;       
+}
+
+.hero-title:hover {
+    color:       var(--yellow-2);
+    text-shadow: 0.5rem 0.5rem 0.2rem var(--blue-2);
+    transform:   scale(1.4);
+}
+
+.intro-container {
+    background-color: var(--white-3);
+    color:            var(--black-1);
+    font-size:        2.4rem;
+    margin:           6rem auto;
+    margin-top:       12rem;
+    padding:          4rem;
+    text-align:       justify;
+}
+
+
+/************************************************************/
+/************************* Main Nav *************************/
+/************************************************************/
+
+.main-nav-container {
+    gap: 2rem;
+}
+
+.main-nav-list li {
+    font-size:  2.4rem;
+}
+
+.main-logo {
+    font-size: 2.2rem;
+}
+
+
+/*************************************************************/
+/************************* Blackjack *************************/
+/*************************************************************/
+
+.blackjack-container {
+    background-color: var(--blue-1);
+    display:          flex;
+    flex-direction:   column;
+    margin:           6rem auto;
+    margin-top:       16rem;
+    padding:          4rem;
+}
+
+.blackjack-title {
+    color:        var(--white-3);
+    font-size:    16rem;
+    font-weight:  700;
+    text-align:   center;
+    text-shadow:  0.7rem 0.7rem 0.4rem var(--black-1);
+} 
+
+.cards {
+    display:         flex;
+    gap:             8rem;
+    justify-content: center;
+    margin:          4rem auto;
+    width:           90%;
+
+}
+
+.card img {
+    border-radius: 2rem;
+    box-shadow:    1.2rem 1.2rem 2.4rem var(--black-1);
+    transition:    all 0.3s linear;
+    width:         20rem;
+}
+
+.card img:hover {
+    transform: rotate(12deg);
+}
+
+.card:nth-child(2), .card:nth-child(3) {
+    display: block;
+}
+
+.blackjack-elements {
+    margin:        auto;
+    margin-bottom: 6rem;
+}
+
+.blackjack-elements p {
+    color:       var(--white-1);
+    font-size:   2.6rem;
+    line-height: 3;
+    margin:      6rem auto;
+}
+
+.blackjack-btn {
+    justify-content: flex-start;
+    display:         flex;
+    flex-direction:  row-reverse;
+}
+
+.blackjack-btn a {
+    display:          block;
+    width:            45%;
+    border:           solid 0.4rem var(--yellow-4);
+    text-align:       center;
+    color:            var(--yellow-4);
+    background-color: var(--blue-2);
+    margin:           4rem;
+    padding:          2rem 1rem 2rem 1rem;
+    font-size:        3rem;
+    transition:       all 0.3s linear;    
+}
+
+.blackjack-btn a:hover {
+    background-color: var(--green-3);
+}
+
+.blackjack-btn a:active {
+    background-color: var(--green-4);
+    transform:        scale(0.98);
+}
+
+
+/************************************************************/
+/************************* Projects *************************/
+/************************************************************/
+
+.galery {
+    align-items:     center;
+    display:         flex;
+    justify-content: center;
+    margin:          10rem auto;
+}
+
+.project {    
+    align-items:     center;
+    color:           var(--white-2);
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    margin:          10rem auto;
+
+}
+
+.project-title {
+    background-color: var(--blue-2);
+    transform:        translate(-26rem, 2rem);    
+}
+
+.project-title h3 {
+    font-size: 3rem;
+    padding:   1rem 2rem;
+}
+
+.project-box {    
+    align-items:      center;
+    background-color: var(--yellow-3);
+    display:          flex;
+    flex-direction:   row-reverse;
+    gap:              2rem;
+    justify-content:  center;
+}
+
+.project-text {
+    font-size:  2rem;
+    padding:    4rem;
+    text-align: justify;
+}
+
+.project-image img {
+    box-shadow: 1.2rem 1.2rem 2.4rem var(--black-1);    
+    margin:     4rem;
+    width:      50rem;
+}
+
+.project-inverse-title {
+    transform: translate(26rem, 2rem);    
+}
+
+.project-inverse-box {
+    flex-direction: row;
+}
+
+
+/***********************************************************/
+/************************* Youtube *************************/
+/***********************************************************/
+
+.videos {
+    margin-top: 18rem;
+}
+
+.logo-youtube i {
+    font-size: 32rem;
+    margin:    6rem auto;    
+}
+
+
+.videos h3 {
+    font-size: 4.8rem;
+}
+
+.videos p {
+    font-size:     2.4rem;
+    margin-bottom: 6rem;
+    width:         80%;
+}   
+
+.video iframe {
+    height: 38rem;
+    margin: 4rem auto;
+    width:  54rem;
+}
+
+
+/***************************************************************/
+/************************* Main Footer *************************/
+/***************************************************************/
+
+.main-footer {
+    padding-bottom:   4rem;
+    padding-top:      6rem;
+}
+
+.social p {
+    font-size: 4rem;
+}
+
+.social-links {
+    flex-direction:  row;
+    font-size:       6rem;
+}
+
+.social-links a:hover {
+    color:     var(--yellow-2);
+    transform: scale(1.6);
+}
+
+.social-links a:active {
+    color:     var(--yellow-3);
+    transform: scale(1.4);
+}
+
+.copyright {
+    font-size:   1.8rem;
+}
+
+
+/********************************************************/
+/************************* Blog *************************/
+/********************************************************/
+
+.blog {
+    margin:          14rem auto;
+}

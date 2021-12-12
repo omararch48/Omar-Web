@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block tab_name %}
+Inicio
+{% endblock %}
+
+
+{% block hero_class %}index{% endblock %}
+
+
+{% block hero_title %}
+Bienvenidos
+{% endblock %}
+
+
+{% block intro_text %}
+Bienvenidos a mi página, aqui se podrá encontrar información sobre mis proyectos y mi contacto, además
+de algunas publicaciones que pienso puede servir como entretenimiento.
+{% endblock %}
+
+
+{% block content %}
+<main class="main">
+    <div class="blackjack-container width-90 round-box">
+        <h2 class="blackjack-title">Blackjack</h2>
+        <div class="cards">
+            <div class="card"><img src="{% static 'core/assets/img/cards/AS.png' %}"></div>
+            <div class="card"><img src="{% static 'core/assets/img/cards/QH.png' %}"></div>
+            <div class="card"><img src="{% static 'core/assets/img/cards/KD.png' %}"></div>
+        </div>
+        <div class="blackjack-elements width-80">
+            <p class="text-justify">
+                Este juego consiste en tratar de llegar a una puntuación de 21, tomando una carta a la vez, para 
+                esto debemos recordar que el valor de cada carta está indicado por su número, excepto para el joto, la
+                reina, el rey y el as, los cuales toman un valor de 10 excepto por el as, el cual corresponde a 11.
+            </p>
+            <div class="blackjack-btn">
+                <a class="round-box" href="./blackjack.html" target="blank">Diviertete un poco</a>
+            </div>
+        </div>
+    </div>        
+    <div class="videos width-60 round-box">
+        <div class="logo-youtube"><i class="fab fa-youtube"></i></div>                
+        <p class="text-center text-justify ">
+            Aqui dejo un par de videos de las temáticas que me gustan en YouTube
+        </p>
+        <h3 class="text-center">Relatos de la noche</h3>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/qY5LJoGyeL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>                
+        <p>
+            Si te gustan las historias de terror, debes echar una viztazo a los vídeos 
+            de este canal, ideal para escuchar antes de dormir.
+        </p>
+        <h3 class="text-center">Derivando</h3>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/UR2oDYZ-Sao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>                
+        <p>
+            Este es una canal de divulgación científica, en particular de matemáticas, los 
+            temas son presentados de forma clara y entretenida, recomendado si tienes 
+            curiosidad sobre el estudio de las matemáticas. 
+        </p>
+    </div>
+</main>        
+{% endblock %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Normalize -->
+        <link rel="stylesheet" href="{% static 'core/assets/css/normalize.css' %}">
+        <!-- Styles -->
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-300px.css' %}" media="screen and (min-width:300px)">
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-400px.css' %}" media="screen and (min-width:400px)">
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-500px.css' %}" media="screen and (min-width:500px)">
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-600px.css' %}" media="screen and (min-width:600px)">
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-800px.css' %}" media="screen and (min-width:800px)">
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-1000px.css' %}" media="screen and (min-width:1000px)">
+        <link rel="stylesheet" href="{% static 'core/assets/css/styles-1300px.css' %}" media="screen and (min-width:1200px)">
+        <!--  FONT AWESOME  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+        <!-- FONT MUSEOMODERNO -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;400;700&family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+        <title>{% block tab_name %}{% endblock %} | ODES</title>
+    </head>
+    <body>
+        <header>
+            <div class="main-nav-container">
+                <div class="main-logo">
+                    <span>Omar Daniel Esquivel Sánchez</span>
+                </div>
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li><a href="{% url 'home' %}">Inicio</a></li>
+                        <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'contact' %}">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="hero hero-{% block hero_class %}{% endblock %}">
+            <div class="hero-title">
+                {% block hero_title %}{% endblock %}
+            </div>
+        </div>
+
+        {% if request.path != "/blog/" %}
+        <section class="intro-container width-80 round-box">
+            <div class="intro">
+                <p>
+                    {% block intro_text %}{% endblock %}
+                </p>
+            </div>
+        </section>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+
+        <footer class="main-footer">    
+            <div class="footer-container width-80">
+                <section class="social">
+                    <p>Sígueme en mis redes</p>
+                    <div class="social-links">
+                        <a href = "https://github.com/omar48-arch" target = "blank"><i class="fab fa-github"></i></a>
+                        <a href = "https://gitlab.com/omar48-arch" target = "blank"><i class="fab fa-gitlab"></i></a>
+                        <a href = "https://www.youtube.com/channel/UC8fi8DVwQxbecxkruVBByEw?view_as=subscriber" target = "_blank"><i class="fab fa-youtube"></i></a>                
+                        <a href = "https://www.facebook.com/omar.esquivel.35513800" target = "blank"><i class="fab fa-facebook"></i></a>
+                        <a href = "https://twitter.com/OmarEsq90629216" target = "blank"><i class="fab fa-twitter"></i></a>             
+                        <a href = "https://www.instagram.com/omar48arch/?hl=es-la" target = "blank"><i class="fab fa-instagram"></i></a>                        
+                    </div>
+                </section>
+                <h3 class="copyright">Omar Daniel Esquivel Sánchez - 2021</h3>            
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block tab_name %}
+Blog
+{% endblock %}
+
+
+{% block hero_class %}blog{% endblock %}
+
+
+{% block hero_title %}
+Blog
+{% endblock %}
+
+
+{% block content %}
+<main class="main">
+    <div class="blog width-85">
+        <p>En construcción</p>
+        <div class="blog-image">
+            <img src="{% static 'core/assets/img/build.svg' %}" alt="En construcción">
+        </div>
+    </div>        
+</main>
+{% endblock %}

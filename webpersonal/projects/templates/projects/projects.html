@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block tab_name %}
+Proyectos
+{% endblock %}
+
+
+{% block hero_class %}projects{% endblock %}
+
+
+{% block hero_title %}
+Proyectos
+{% endblock %}
+
+
+{% block intro_text %}
+Aqui publicaré una lista de cada uno de mis nuevos proyectos, con 
+una pequeña descripción.
+{% endblock %}
+
+
+{% block content %}
+    {% for project in projects %}
+        <div class="project width-90">
+            <div class="project-title round-box">            
+                <h3>{{project.title}}</h3>
+            </div>            
+            <div class="project-box round-box">                                
+                <div class="project-image"><img src="{{project.image.url}}" alt="Imagen del proyecto"></div>
+                <div class="project-text">                    
+                    <p>
+                        {{project.description}}
+                    </p>                
+                    <a class="project-link" href="{{project.link}}" target="blank">
+                        Ver más...
+                    </a>
+                </div>
+            </div>
+        </div>          
+    {% endfor %}
+{% endblock %}
